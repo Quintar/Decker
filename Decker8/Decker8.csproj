@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{63B8080F-5C80-44A8-96A8-6BA21FE5794C}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Decker8</RootNamespace>
+    <AssemblyName>Decker8</AssemblyName>
+    <DefaultLanguage>de-DE</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>Decker8_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <TargetFrameworkVersion />
+    <PackageCertificateThumbprint>789F599485CE1F92F3D5516A259200917751B143</PackageCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CharacterCreationViewModel.cs" />
+    <Compile Include="DeckerCharakter.cs" />
+    <Compile Include="FuncCommand.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewCharacter.xaml.cs">
+      <DependentUpon>NewCharacter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelayCommand.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="Decker8_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\DefaultGraphics\HOME_Char0.bmp" />
+    <Content Include="Assets\DefaultGraphics\HOME_Char1.bmp" />
+    <Content Include="Assets\DefaultGraphics\HOME_Contract0.bmp" />
+    <Content Include="Assets\DefaultGraphics\HOME_Contract1.bmp" />
+    <Content Include="Assets\DefaultGraphics\HOME_Deck0.bmp" />
+    <Content Include="Assets\DefaultGraphics\HOME_Deck1.bmp" />
+    <Content Include="Assets\DefaultGraphics\HOME_MAIN.bmp" />
+    <Content Include="Assets\DefaultGraphics\HOME_Matrix0.bmp" />
+    <Content Include="Assets\DefaultGraphics\HOME_Matrix1.bmp" />
+    <Content Include="Assets\DefaultGraphics\HOME_Options0.bmp" />
+    <Content Include="Assets\DefaultGraphics\Home_Options1.bmp" />
+    <Content Include="Assets\DefaultGraphics\HOME_Project0.bmp" />
+    <Content Include="Assets\DefaultGraphics\HOME_Project1.bmp" />
+    <Content Include="Assets\DefaultGraphics\HOME_Rest0.bmp" />
+    <Content Include="Assets\DefaultGraphics\HOME_Rest1.bmp" />
+    <Content Include="Assets\DefaultGraphics\HOME_Shop0.bmp" />
+    <Content Include="Assets\DefaultGraphics\HOME_Shop1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Arrow_E0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Arrow_E1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Arrow_E2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Arrow_n0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Arrow_n1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Arrow_n2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Arrow_s0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Arrow_s1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Arrow_s2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Arrow_w0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Arrow_w1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Arrow_w2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Attack0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Attack1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Attack2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Backdoor0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Backdoor1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Backdoor2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Bio_Cover.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Char0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Char1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Contract0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Contract1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Crash0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Crash1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Crash2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Deceive0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Deceive1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Deceive2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Deck0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Deck1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Disconnect0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Disconnect1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Disconnect2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Edit0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Edit1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Edit2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Enter_Portal0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Enter_Portal1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Enter_Portal2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Erase0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Erase1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Erase2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Getfile0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Getfile1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Getfile2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Getmap0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Getmap1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Getmap2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Kill_Alarm0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Kill_Alarm1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Kill_Alarm2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Kill_Shutdown0.BMP" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Kill_Shutdown1.BMP" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Kill_Shutdown2.BMP" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Kill_Trace0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Kill_Trace1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Kill_Trace2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Load0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Load1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Load2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Main.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Map_Zoom0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Map_Zoom1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Options0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Options1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Run_Program0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Run_Program1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Run_Program2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_scan0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_scan1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_scan2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Set_def0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Set_def1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Set_def2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Trace_Cover.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Unload0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Unload1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Unload2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Use_io0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Use_io1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Use_io2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_View_Ice0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_View_Ice1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_View_Ice2.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Wait0.bmp" />
+    <Content Include="Assets\DefaultGraphics\MATRIX_Wait1.bmp" />
+    <Content Include="Assets\DefaultGraphics\MISC_Characters.bmp" />
+    <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\SmallLogo.png" />
+    <Content Include="Assets\Sound\44Magnum.wav" />
+    <Content Include="Assets\Sound\9mmPistol.wav" />
+    <Content Include="Assets\Sound\Analyze.wav" />
+    <Content Include="Assets\Sound\Backdoor.wav" />
+    <Content Include="Assets\Sound\Beep.wav" />
+    <Content Include="Assets\Sound\Boost.wav" />
+    <Content Include="Assets\Sound\CancelAlert.wav" />
+    <Content Include="Assets\Sound\Crash.wav" />
+    <Content Include="Assets\Sound\Deceive.wav" />
+    <Content Include="Assets\Sound\Deceive2.wav" />
+    <Content Include="Assets\Sound\Decrypt.wav" />
+    <Content Include="Assets\Sound\Dialup.wav" />
+    <Content Include="Assets\Sound\Download-EditComplete.wav" />
+    <Content Include="Assets\Sound\Edit.wav" />
+    <Content Include="Assets\Sound\EndOfLine.wav" />
+    <Content Include="Assets\Sound\Erase.wav" />
+    <Content Include="Assets\Sound\Error.wav" />
+    <Content Include="Assets\Sound\Flush.wav" />
+    <Content Include="Assets\Sound\Hide.wav" />
+    <Content Include="Assets\Sound\ICEEnter.wav" />
+    <Content Include="Assets\Sound\ICELeave.wav" />
+    <Content Include="Assets\Sound\ICEQuery.wav" />
+    <Content Include="Assets\Sound\ICEQuery2.wav" />
+    <Content Include="Assets\Sound\IO.wav" />
+    <Content Include="Assets\Sound\LoadComplete.wav" />
+    <Content Include="Assets\Sound\Map.wav" />
+    <Content Include="Assets\Sound\Misc1.wav" />
+    <Content Include="Assets\Sound\Misc2.wav" />
+    <Content Include="Assets\Sound\Misc3.wav" />
+    <Content Include="Assets\Sound\Misc4.wav" />
+    <Content Include="Assets\Sound\Misc5.wav" />
+    <Content Include="Assets\Sound\Move.wav" />
+    <Content Include="Assets\Sound\Ping.wav" />
+    <Content Include="Assets\Sound\Portal.wav" />
+    <Content Include="Assets\Sound\Pulse1.wav" />
+    <Content Include="Assets\Sound\Pulse2.wav" />
+    <Content Include="Assets\Sound\Pulse3.wav" />
+    <Content Include="Assets\Sound\RedAlert.wav" />
+    <Content Include="Assets\Sound\Reflect.wav" />
+    <Content Include="Assets\Sound\Relocate.wav" />
+    <Content Include="Assets\Sound\Scan.wav" />
+    <Content Include="Assets\Sound\ScanDone.wav" />
+    <Content Include="Assets\Sound\Silence.wav" />
+    <Content Include="Assets\Sound\Smoke.wav" />
+    <Content Include="Assets\Sound\Spike.wav" />
+    <Content Include="Assets\Sound\StartDownload.wav" />
+    <Content Include="Assets\Sound\Tapeworm.wav" />
+    <Content Include="Assets\Sound\YellowAlert.wav" />
+    <Content Include="Assets\Sound\Zap.wav" />
+    <Content Include="Assets\SplashScreen.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Page Include="NewCharacter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Common\StandardStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

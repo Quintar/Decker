@@ -1,0 +1,64 @@
+﻿<Application
+    x:Class="Decker8.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Decker8">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+                <!-- 
+                    Stile, die allgemeine Aspekte von Aussehen und Verhalten der Plattform definieren
+                    Erforderlich für Visual Studio-Projekt- und Elementvorlagen
+                 -->
+                <ResourceDictionary Source="Common/StandardStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <x:String x:Key="NameAlias">Name/Primary Alias</x:String>
+            <x:String x:Key="CharacterImage">Character Image</x:String>
+            <x:String x:Key="PriorityTable">PRIORITY TABLE</x:String>
+            <x:String x:Key="PrioResA">Technomancer: Resonance 6, two Rating 5 Resonance skills, 5 complex forms</x:String>
+            <x:String x:Key="PrioResB">Technomancer: Resonance 4, two Rating 4 Resonance skills, 2 complex forms</x:String>
+            <x:String x:Key="PrioResC">Technomancer: Resonance 3, 1 complex form</x:String>
+            <x:String x:Key="PrioResD">Mundane Decker</x:String>
+            <x:String x:Key="PrioResE">Mundane Decker</x:String>
+            <x:String x:Key="PrioMetaHuman">Human</x:String>
+            <x:String x:Key="PrioMetaElf">Elf</x:String>
+            <x:String x:Key="PrioMetaDwarf">Dwarf</x:String>
+            <x:String x:Key="PrioMetaOrc">Orc</x:String>
+            <x:String x:Key="PrioMetaTroll">Troll</x:String>
+            <x:String x:Key="PrioAttributeA">12</x:String>
+            <x:String x:Key="PrioAttributeB">10</x:String>
+            <x:String x:Key="PrioAttributeC">8</x:String>
+            <x:String x:Key="PrioAttributeD">6</x:String>
+            <x:String x:Key="PrioAttributeE">4</x:String>
+            <x:String x:Key="PrioSkillA">9/1</x:String>
+            <x:String x:Key="PrioSkillB">6/1</x:String>
+            <x:String x:Key="PrioSkillC">4</x:String>
+            <x:String x:Key="PrioSkillD">2</x:String>
+            <x:String x:Key="PrioSkillE">1</x:String>
+            <x:String x:Key="PrioRessourcesA">450,000</x:String>
+            <x:String x:Key="PrioRessourcesB">275,000</x:String>
+            <x:String x:Key="PrioRessourcesC">140,000</x:String>
+            <x:String x:Key="PrioRessourcesD">50,000</x:String>
+            <x:String x:Key="PrioRessourcesE">6,000</x:String>
+            <x:String x:Key="DescHumans">Humans: Humans are the allrounders in terms of maximal Attributes. They do have the highest possible Edge though.</x:String>
+            <x:String x:Key="DescElfs">Elfes: This nimble Metahumans have a lower limit in terms of Health but start with higher Charisma.</x:String>
+            <x:String x:Key="DescDwarfs">Dwarfs: Dwarfs are sturdier then then Humans and Elfes and have a higher Willpower. Thier lifestyles are 120% of a human.</x:String>
+            <x:String x:Key="DescOrcs">Orks: Are even healthier than Dwarfs but can never be as bright or charismatic as a human.</x:String>
+            <x:String x:Key="DescTrolls">Trolls: Are the hardiest of the Metahumans but this comes with severely reduced charisma and a higher lifestlye of 200%</x:String>
+            <x:String x:Key="DescAttributes">This points are distributed about the 4 Attributes Willpower, Logic, Intuition and Charisma. All skills are linked to an Attribute and the higher each is, the better are your chances of success.</x:String>
+            <x:String x:Key="DescResonance">If you want to play a Technomancer ,someone who can hack without a Cyberdeck but with mind alone, then you need to choose one of these Priorities. Resonance is the value of how in tune with the Matrix you are. Resonance Skills are skills you may only choose if you have a Resonance value. Complex forms are the Programs you use instead of normal programs. A Resonanceuser can NEVER use a Cyberdeck!</x:String>
+            <x:String x:Key="DescSkills">Your Attributes are the raw talent you pocess. Skills are the tricks of the trade, the learned and trustet mechanics. This points decide how good you really are at a task. If you try to use a skill you have no points in you have to use your Attribute instead but with a decreased value.</x:String>
+            <x:String x:Key="DescRessources">Your Decker needs money to buy the best and latest deck, programms and other hardware. He also needs to live somewhere. Technomancers don't need as much cash because they don't need a deck, but they still have to live somehwere. Your lifestyle also helps get better jobs and better equipement in the market.</x:String>
+            <x:String x:Key="Priority_Table">PRIORITY TABLE</x:String>
+            <x:String x:Key="Priority">PRIORITY</x:String>
+            <x:String x:Key="Metatype">METATYPE</x:String>
+            <x:String x:Key="Attribute">ATTRIBUTES</x:String>
+            <x:String x:Key="Resonance">RESONANCE</x:String>
+            <x:String x:Key="Skill">SKILLS</x:String>
+            <x:String x:Key="Ressources">RESSOURCES</x:String>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

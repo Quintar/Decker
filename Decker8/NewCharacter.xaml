@@ -1,0 +1,275 @@
+﻿<Page
+    x:Class="Decker8.NewCharacter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Decker8"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+    </Page.Resources>
+    <Page.DataContext>
+        <local:CharacterCreationViewModel/>
+    </Page.DataContext>
+
+    <Grid Background="#FF1D1D1D">
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="26" Margin="6,6,0,0" VerticalAlignment="Top" Width="137" RenderTransformOrigin="0.5,0.5"/>
+
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="25.897" Margin="21.407,6.054,0,0" VerticalAlignment="Top" Width="137.3" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <Rectangle.RenderTransform>
+                <CompositeTransform SkewX="39.926"/>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+
+
+        <!--Charaktername-->
+        <TextBlock HorizontalAlignment="Left" Margin="772,21,0,0" TextWrapping="Wrap" Text="{StaticResource NameAlias}" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_Alias" HorizontalAlignment="Left" Margin="772,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Text="{Binding CharacterName, Mode=TwoWay }" FontFamily="Global User Interface" />
+        <Button Content="OK" HorizontalAlignment="Left" Margin="1077,39,0,0" VerticalAlignment="Top" Command="{Binding SetCharNameCommand, Mode=OneWay}"/>
+
+        <!--Prioritätentabelle-->
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="686" Margin="6,31,0,0" VerticalAlignment="Top" Width="757"/>
+        <Rectangle Fill="White" HorizontalAlignment="Left" Height="26" Margin="803,94,0,0" Stroke="Black" VerticalAlignment="Top" Width="26"/>
+        <Rectangle Fill="#2FFFFFFF" HorizontalAlignment="Left" Height="189" Margin="6,243,0,0" VerticalAlignment="Top" Width="756"/>
+        <Rectangle Fill="#2FFFFFFF" HorizontalAlignment="Left" Height="87" Margin="6,585,0,0" VerticalAlignment="Top" Width="756"/>
+        <TextBlock HorizontalAlignment="Left" Margin="6,6,0,0" TextWrapping="Wrap" Text="{StaticResource Priority_Table}" VerticalAlignment="Top" Foreground="#FFFFA02D" FontWeight="Bold" Height="18" Width="130" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="11,31,0,0" TextWrapping="Wrap" Text="{StaticResource Priority}" VerticalAlignment="Top" Foreground="#FFFFA02D" FontWeight="Bold" Height="17" Width="75" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="83,31,0,0" TextWrapping="Wrap" Text="{StaticResource Metatype}" VerticalAlignment="Top" Foreground="#FFFFA02D" FontWeight="Bold" Height="17" Width="83" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="168,31,0,0" TextWrapping="Wrap" Text="{StaticResource Attribute}" VerticalAlignment="Top" Foreground="#FFFFA02D" FontWeight="Bold" Height="17" Width="87" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="260,31,0,0" TextWrapping="Wrap" Text="{StaticResource Resonance}" VerticalAlignment="Top" Foreground="#FFFFA02D" FontWeight="Bold" Height="17" Width="107" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="550,31,0,0" TextWrapping="Wrap" Text="{StaticResource Skill}" VerticalAlignment="Top" Foreground="#FFFFA02D" FontWeight="Bold" Height="17" Width="46" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="655,32,0,0" TextWrapping="Wrap" Text="{StaticResource Ressources}" VerticalAlignment="Top" Foreground="#FFFFA02D" FontWeight="Bold" Height="17" Width="103" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,137,0,0" TextWrapping="Wrap" Text="A" VerticalAlignment="Top" TextAlignment="Center" Width="61" Height="17" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,328,0,0" TextWrapping="Wrap" Text="B" VerticalAlignment="Top" TextAlignment="Center" Width="61" Height="18" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,488,0,0" TextWrapping="Wrap" Text="C" VerticalAlignment="Top" TextAlignment="Center" Width="61" Height="18" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,616,0,0" TextWrapping="Wrap" Text="D" VerticalAlignment="Top" TextAlignment="Center" Width="61" Height="18" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,684,0,0" TextWrapping="Wrap" Text="E" VerticalAlignment="Top" TextAlignment="Center" Width="61" Height="18" FontSize="16" RenderTransformOrigin="0.492,0.556"/>
+        <!--Charakterbild-->
+        <TextBlock HorizontalAlignment="Left" Margin="772,76,0,0" TextWrapping="Wrap" Text="{StaticResource CharacterImage}" VerticalAlignment="Top"/>
+        <Image x:Name="img_Character" HorizontalAlignment="Left" Height="25" Margin="772,94,0,0" VerticalAlignment="Top" Width="26" Stretch="None" Source="Assets/DefaultGraphics/MISC_Characters.bmp"/>
+        <Button x:Name="btn_PrevCharImage" Content="&lt;" HorizontalAlignment="Left" Margin="857,81,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_NetCharImage" Content="&gt;" HorizontalAlignment="Left" Margin="907,81,0,0" VerticalAlignment="Top"/>
+
+        <!--Metatyp-->
+        <!--Priority A-->
+        <Button Content="{StaticResource PrioMetaHuman}" HorizontalAlignment="Left" Margin="85,54,0,0" VerticalAlignment="Top" Command="{Binding UpdatePriorityMetatype, Mode=OneWay}" CommandParameter="A-Human">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioAHuman, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioMetaElf}" HorizontalAlignment="Left" Margin="85,92,0,0" VerticalAlignment="Top" Width="83" Command="{Binding UpdatePriorityMetatype, Mode=OneWay}" CommandParameter="A-Elf">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioAElf, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioMetaDwarf}" HorizontalAlignment="Left" Margin="85,129,0,0" VerticalAlignment="Top" Width="83" Command="{Binding UpdatePriorityMetatype, Mode=OneWay}" CommandParameter="A-Dwarf">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioADwarf, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioMetaOrc}" HorizontalAlignment="Left" Margin="85,166,0,0" VerticalAlignment="Top" Width="83" Command="{Binding UpdatePriorityMetatype, Mode=OneWay}" CommandParameter="A-Orc">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioAOrc, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioMetaTroll}" HorizontalAlignment="Left" Margin="85,203,0,0" VerticalAlignment="Top" Width="83" Command="{Binding UpdatePriorityMetatype, Mode=OneWay}" CommandParameter="A-Troll">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioATroll, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <!--Priority B-->
+        <Button Content="{StaticResource PrioMetaHuman}" HorizontalAlignment="Left" Margin="85,244,0,0" VerticalAlignment="Top" Command="{Binding UpdatePriorityMetatype, Mode=OneWay}" CommandParameter="B-Human">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioBHuman, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioMetaElf}" HorizontalAlignment="Left" Margin="85,281,0,0" VerticalAlignment="Top" Width="83" Command="{Binding UpdatePriorityMetatype, Mode=OneWay}" CommandParameter="B-Elf">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioBElf, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioMetaDwarf}" HorizontalAlignment="Left" Margin="85,318,0,0" VerticalAlignment="Top" Width="83" Command="{Binding UpdatePriorityMetatype, Mode=OneWay}" CommandParameter="B-Dwarf">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioBDwarf, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioMetaOrc}" HorizontalAlignment="Left" Margin="85,355,0,0" VerticalAlignment="Top" Width="83" Command="{Binding UpdatePriorityMetatype, Mode=OneWay}" CommandParameter="B-Orc">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioBOrc, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioMetaTroll}" HorizontalAlignment="Left" Margin="85,392,0,0" VerticalAlignment="Top" Width="83" Command="{Binding UpdatePriorityMetatype, Mode=OneWay}" CommandParameter="B-Troll">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioBTroll, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <!--Priority C-->
+        <Button Content="{StaticResource PrioMetaHuman}" HorizontalAlignment="Left" Margin="85,434,0,0" VerticalAlignment="Top" Command="{Binding UpdatePriorityMetatype, Mode=OneWay}" CommandParameter="C-Human">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioCHuman, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioMetaElf}" HorizontalAlignment="Left" Margin="85,471,0,0" VerticalAlignment="Top" Width="83" Command="{Binding UpdatePriorityMetatype, Mode=OneWay}" CommandParameter="C-Elf">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioCElf, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioMetaDwarf}" HorizontalAlignment="Left" Margin="85,508,0,0" VerticalAlignment="Top" Width="83" Command="{Binding UpdatePriorityMetatype, Mode=OneWay}" CommandParameter="C-Dwarf">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioCDwarf, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioMetaOrc}" HorizontalAlignment="Left" Margin="85,545,0,0" VerticalAlignment="Top" Width="83" Command="{Binding UpdatePriorityMetatype, Mode=OneWay}" CommandParameter="C-Orc">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioCOrc, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <!--Priority D-->
+        <Button Content="{StaticResource PrioMetaHuman}" HorizontalAlignment="Left" Margin="85,590,0,0" VerticalAlignment="Top" Command="{Binding UpdatePriorityMetatype, Mode=OneWay}" CommandParameter="D-Human">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioDHuman, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioMetaElf}" HorizontalAlignment="Left" Margin="85,627,0,0" VerticalAlignment="Top" Width="83" Command="{Binding UpdatePriorityMetatype, Mode=OneWay}" CommandParameter="D-Elf">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioDElf, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <!--Priority E-->
+        <Button Content="{StaticResource PrioMetaHuman}" HorizontalAlignment="Left" Margin="85,674,0,0" VerticalAlignment="Top" Command="{Binding UpdatePriorityMetatype, Mode=OneWay}" CommandParameter="E-Human">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioEHuman, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+
+        <!--Attribut-->
+        <Button Content="{StaticResource PrioAttributeA}" HorizontalAlignment="Left" Margin="166,129,0,0" VerticalAlignment="Top" Width="90" Command="{Binding UpdatePriorityAttribute, Mode=OneWay}" CommandParameter="A">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioAAttribute, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioAttributeB}" HorizontalAlignment="Left" Margin="166,318,0,0" VerticalAlignment="Top" Width="90" Command="{Binding UpdatePriorityAttribute, Mode=OneWay}" CommandParameter="B">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioBAttribute, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioAttributeC}" HorizontalAlignment="Left" Margin="166,471,0,0" VerticalAlignment="Top" Width="90" Command="{Binding UpdatePriorityAttribute, Mode=OneWay}" CommandParameter="C">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioCAttribute, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioAttributeD}" HorizontalAlignment="Left" Margin="166,605,0,0" VerticalAlignment="Top" Width="90" Command="{Binding UpdatePriorityAttribute, Mode=OneWay}" CommandParameter="D">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioDAttribute, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioAttributeE}" HorizontalAlignment="Left" Margin="166,674,0,0" VerticalAlignment="Top" Width="90" Command="{Binding UpdatePriorityAttribute, Mode=OneWay}" CommandParameter="E">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioEAttribute, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+
+        <!--Resonanc-->
+        <Button  HorizontalAlignment="Left" Margin="260,112,0,0" VerticalAlignment="Top" Width="249" Command="{Binding UpdatePriorityResonance, Mode=OneWay}"  CommandParameter="A">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioAResonance, Mode=OneWay}"/>
+            </Button.Background>
+            <TextBlock Text="{StaticResource PrioResA}" TextWrapping="WrapWholeWords"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="260,296,0,0" VerticalAlignment="Top" Width="249" Command="{Binding UpdatePriorityResonance, Mode=OneWay}" CommandParameter="B">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioBResonance, Mode=OneWay}"/>
+            </Button.Background>
+            <TextBlock Text="{StaticResource PrioResB}" TextWrapping="WrapWholeWords"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="260,456,0,0" VerticalAlignment="Top" Width="249" Command="{Binding UpdatePriorityResonance, Mode=OneWay}" CommandParameter="C">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioCResonance, Mode=OneWay}"/>
+            </Button.Background>
+            <TextBlock Text="{StaticResource PrioResC}" TextWrapping="WrapWholeWords"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="260,605,0,0" VerticalAlignment="Top" Width="249" Command="{Binding UpdatePriorityResonance, Mode=OneWay}" CommandParameter="D">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioDResonance, Mode=OneWay}"/>
+            </Button.Background>
+            <TextBlock Text="{StaticResource PrioResD}" TextWrapping="WrapWholeWords"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="260,674,0,0" VerticalAlignment="Top" Width="249" Command="{Binding UpdatePriorityResonance, Mode=OneWay}" CommandParameter="E">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioEResonance, Mode=OneWay}"/>
+            </Button.Background>
+            <TextBlock Text="{StaticResource PrioResE}" TextWrapping="WrapWholeWords"/>
+        </Button>
+        <!--Skills-->
+        <Button Content="{StaticResource PrioSkillA}" HorizontalAlignment="Left" Margin="550,129,0,0" VerticalAlignment="Top" Width="90" Command="{Binding UpdatePrioritySkill, Mode=OneWay}" CommandParameter="A">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioASkill, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioSkillB}" HorizontalAlignment="Left" Margin="550,318,0,0" VerticalAlignment="Top" Width="90" Command="{Binding UpdatePrioritySkill, Mode=OneWay}" CommandParameter="B">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioBSkill, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioSkillC}" HorizontalAlignment="Left" Margin="550,471,0,0" VerticalAlignment="Top" Width="90" Command="{Binding UpdatePrioritySkill, Mode=OneWay}" CommandParameter="C">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioCSkill, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioSkillD}" HorizontalAlignment="Left" Margin="550,605,0,0" VerticalAlignment="Top" Width="90" Command="{Binding UpdatePrioritySkill, Mode=OneWay}" CommandParameter="D">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioDSkill, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioSkillE}" HorizontalAlignment="Left" Margin="550,674,0,0" VerticalAlignment="Top" Width="90" Command="{Binding UpdatePrioritySkill, Mode=OneWay}" CommandParameter="E">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioESkill, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <!--Ressourcen-->
+        <Button Content="{StaticResource PrioRessourcesA}" HorizontalAlignment="Left" Margin="655,129,0,0" VerticalAlignment="Top" Width="90" Command="{Binding UpdatePriorityRessource, Mode=OneWay}" CommandParameter="A">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioARessource, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioRessourcesB}" HorizontalAlignment="Left" Margin="655,318,0,0" VerticalAlignment="Top" Width="90" Command="{Binding UpdatePriorityRessource, Mode=OneWay}" CommandParameter="B">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioBRessource, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioRessourcesC}" HorizontalAlignment="Left" Margin="655,471,0,0" VerticalAlignment="Top" Width="90" Command="{Binding UpdatePriorityRessource, Mode=OneWay}" CommandParameter="C">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioCRessource, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioRessourcesD}" HorizontalAlignment="Left" Margin="655,605,0,0" VerticalAlignment="Top" Width="90" Command="{Binding UpdatePriorityRessource, Mode=OneWay}" CommandParameter="D">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioDRessource, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+        <Button Content="{StaticResource PrioRessourcesE}" HorizontalAlignment="Left" Margin="655,674,0,0" VerticalAlignment="Top" Width="90" Command="{Binding UpdatePriorityRessource, Mode=OneWay}" CommandParameter="E">
+            <Button.Background>
+                <SolidColorBrush Color="{Binding PrioERessource, Mode=OneWay}"/>
+            </Button.Background>
+        </Button>
+
+        <!--Beschreibungen-->
+        <TextBlock HorizontalAlignment="Left" Margin="768,135,0,0" TextWrapping="Wrap" Text="Metatypes:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="768,153,0,0" TextWrapping="Wrap" Text="{StaticResource DescHumans}" VerticalAlignment="Top" Width="553"/>
+        <TextBlock HorizontalAlignment="Left" Margin="768,179,0,0" TextWrapping="Wrap" Text="{StaticResource DescElfs}" VerticalAlignment="Top" Width="468"/>
+        <TextBlock HorizontalAlignment="Left" Margin="769,208,0,0" TextWrapping="Wrap" Text="{StaticResource DescDwarfs}" VerticalAlignment="Top" Width="578"/>
+        <TextBlock HorizontalAlignment="Left" Margin="768,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{StaticResource DescOrcs}" Width="428"/>
+        <TextBlock HorizontalAlignment="Left" Margin="768,258,0,0" TextWrapping="Wrap" Text="{StaticResource DescTrolls}" VerticalAlignment="Top" Width="566"/>
+        <TextBlock HorizontalAlignment="Left" Margin="769,289,0,0" TextWrapping="Wrap" Text="Attributes:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="769,305,0,0" TextWrapping="Wrap" Text="{StaticResource DescAttributes}" VerticalAlignment="Top" Width="586"/>
+        <TextBlock HorizontalAlignment="Left" Margin="769,336,0,0" TextWrapping="Wrap" Text="Resonance:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="769,354,0,0" TextWrapping="Wrap" Text="{StaticResource DescResonance}" VerticalAlignment="Top" Width="581"/>
+        <TextBlock HorizontalAlignment="Left" Margin="769,412,0,0" TextWrapping="Wrap" Text="Skills:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="769,430,0,0" TextWrapping="Wrap" Text="{StaticResource DescSkills}" VerticalAlignment="Top" Width="589"/>
+        <TextBlock HorizontalAlignment="Left" Margin="769,475,0,0" TextWrapping="Wrap" Text="Ressources:" VerticalAlignment="Top"/>
+        <Border BorderBrush="#FFFFA02D" BorderThickness="0,1" HorizontalAlignment="Left" Height="16" Margin="6,31,0,0" VerticalAlignment="Top" Width="757"/>
+        <TextBlock HorizontalAlignment="Left" Margin="768,493,0,0" TextWrapping="Wrap" Text="{StaticResource DescRessources}" VerticalAlignment="Top" Width="591"/>
+
+
+    </Grid>
+</Page>
